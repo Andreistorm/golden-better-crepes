@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Better - Crêpes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff9f0;
+            color: #333;
+        }
+        header {
+            background-color: #f5a623;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            background: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .menu-item h3 {
+            margin: 10px 0;
+        }
+        .menu-item p {
+            color: #555;
+            margin: 5px 0;
+        }
+        .menu-item button {
+            background-color: #f5a623;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #e69520;
+        }
+        .cart {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            max-height: 60%;
+            overflow-y: auto;
+        }
+        .cart h2 {
+            margin: 0 0 10px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .cart-item span {
+            font-size: 1em;
+        }
+        .cart-total {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .cart button {
+            background-color: #f5a623;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cart button:hover {
+            background-color: #e69520;
+        }
+        .reviews, .delivery, .payment, .ingredients, .contact {
+            margin-top: 40px;
+        }
+        .reviews h2, .delivery h2, .payment h2, .ingredients h2, .contact h2 {
+            text-align: center;
+            color: #f5a623;
+        }
+        .reviews p, .delivery p, .payment p, .ingredients p, .contact p {
+            text-align: center;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Golden Better - Crêpes</h1>
+        <p>Discover our delicious and creative crêpes!</p>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <h2>Welcome to Golden Better - The Art of Crêpes!</h2>
+            <p>At Golden Better, we believe in turning simple ingredients into unforgettable experiences. Our crêpes are made with love and creativity, offering you a perfect balance of taste, texture, and joy in every bite. Whether you're craving a classic treat or a unique twist, our menu has something to satisfy every taste. Explore our variety of delicious crêpes and order now to enjoy a sweet moment at home!</p>
+        </section>
+        <section class="menu">
+            <!-- Menu Items -->
+            <div class="menu-item">
+                <img src="C:\Users\Andrei\Desktop\proiect engleza\images\1.jpg">
+                <h3>Clasic</h3>
+                <p>4 Lei - a crêpe with chocolate cream topping</p>
+                <button onclick="addToCart('Clasic', 4)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\Andrei\Desktop\proiect engleza\images\2.jpg" alt="Classic Dream">
+                <h3>Clasic Dream</h3>
+                <p>6 Lei - a crêpe with chocolate cream and 3 pieces of banana</p>
+                <button onclick="addToCart('Clasic Dream', 6)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\Andrei\Desktop\proiect engleza\images\3.jpg" alt="Grandma Garden">
+                <h3>The Grandma Garden</h3>
+                <p>6 Lei - a crêpe with cherry jam and 2 pieces of chocolate</p>
+                <button onclick="addToCart('The Grandma Garden', 6)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\Andrei\Desktop\proiect engleza\images\4.jpg" alt="Twix Crêpe">
+                <h3>Twix Crêpe</h3>
+                <p>6 Lei - a crêpe with chocolate cream and a twix bar</p>
+                <button onclick="addToCart('Twix Crêpe', 6)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\Andrei\Desktop\proiect engleza\images\5.jpg" alt="Twins">
+                <h3>Twins</h3>
+                <p>7 Lei - 2 crêpes with chocolate cream and decorated with white chocolate</p>
+                <button onclick="addToCart('Twins', 7)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\Andrei\Desktop\proiect engleza\images\6.jpg" alt="Birthday Cake">
+                <h3>Birthday Cake</h3>
+                <p>8 Lei - a crêpe with chocolate cream, white chocolate and colourful candy</p>
+                <button onclick="addToCart('Birthday Cake', 8)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\Andrei\Desktop\proiect engleza\images\7.jpg" alt="Sweet Sushi">
+                <h3>Sweet Sushi</h3>
+                <p>10 Lei - 7 pieces of mini crêpes with chocolate cream and banana</p>
+                <button onclick="addToCart('Sweet Sushi', 10)">Add to Cart</button>
+            </div>
+                </section>
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <p>"The best crêpes I've ever had! Highly recommend!" - Maria</p>
+            <p>"Delicious and creative crêpes. A must-try!" - Andrei</p>
+            <p>"Great taste and excellent service. Will order again!" - Ioana</p>
+        </section>
+        <section class="delivery">
+            <h2>Delivery Methods</h2>
+            <p>We offer fast and reliable delivery through the following methods:</p>
+            <p>- Standard Delivery: 2-3 business days</p>
+            <p>- Express Delivery: 1 business day</p>
+            <p>- Pickup: Available at our store location</p>
+        </section>
+        <section class="payment">
+            <h2>Payment Methods</h2>
+            <p>We accept the following payment methods:</p>
+            <p>- Credit/Debit Card</p>
+            <p>- PayPal</p>
+            <p>- Cash on Delivery</p>
+        </section>
+        <section class="ingredients">
+            <h2>Ingredients and Quantities</h2>
+            <p>Our crêpes are made with the finest ingredients:</p>
+            <p>- Clasic: Chocolate cream (50g)</p>
+            <p>- Clasic Dream: Chocolate cream (50g), Banana (3 pieces)</p>
+            <p>- The Grandma Garden: Cherry jam (40g), Chocolate (2 pieces)</p>
+            <p>- Twix Crêpe: Chocolate cream (50g), Twix bar (1 piece)</p>
+            <p>- Twins: Chocolate cream (50g), White chocolate (20g)</p>
+            <p>- Birthday Cake: Chocolate cream (50g), White chocolate (20g), Colourful candy (10g)</p>
+            <p>- Sweet Sushi: Chocolate cream (50g), Banana (1 piece)</p>
+        </section>
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <p>Golden Better - Crêpes</p>
+            <p>123 Crêpe Street, Bucharest, Romania</p>
+            <p>Phone: +40 123 456 789</p>
+            <p>Email: contact@goldenbettercrepes.com</p>
+        </section>
+    </div>
+    <!-- Cart Section -->
+    <div class="cart" id="cart">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total: 0 Lei</div>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    <script>
+        const cart = [];
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const total = cart.reduce((sum, product) => sum + product.price, 0);
+            cartItems.innerHTML = cart.map(product => 
+                `<div class="cart-item"><span>${product.item}</span><span>${product.price} Lei</span></div>`
+            ).join('');
+            document.querySelector('.cart-total').textContent = `Total: ${total} Lei`;
+        }
+
+        function checkout() {
+            alert('Thank you for your order!');
+            cart.length = 0; // Clear the cart
+            updateCart();
+        }
+    </script>
+</body>
+</html>
+
+        
